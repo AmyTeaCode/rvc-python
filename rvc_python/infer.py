@@ -15,7 +15,7 @@ vc_global = None
 
 def preloadModel(pthFile, device):
     global vc_global
-    lib_dir = os.path.dirname(os.path.abspath(file))
+    lib_dir = os.path.dirname(os.path.abspath(__file__))
     download_rvc_models(lib_dir)
     config = Config(lib_dir,device)
     vc_global = VC(lib_dir,config)
